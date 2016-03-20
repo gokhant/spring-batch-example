@@ -4,6 +4,8 @@ import gokhan.java.spring.batch.model.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.util.FileUtils;
+import org.springframework.util.FileSystemUtils;
 
 import java.util.List;
 

@@ -12,7 +12,7 @@ public class FieldSetMapper3G implements FieldSetMapper<Measurement> {
             return null;
         }
         Measurement m = new Measurement();
-        m.setCellId(fs.readString("cell_id"));
+        m.setCellId(fs.readInt("cell_id"));
         m.setDataTime(fs.readString("data_time"));
         m.addCounter("pd0", fs.readInt("pd0"));
         m.addCounter("pd1", fs.readInt("pd1"));

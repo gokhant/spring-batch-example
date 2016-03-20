@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Measurement {
-    private String cellId;
+    private int cellId;
     private String dataTime;
     private List<Counter> counters = new ArrayList<Counter>();
 
-    public String getCellId() {
+    public int getCellId() {
         return cellId;
     }
 
-    public void setCellId(String cellId) {
+    public void setCellId(int cellId) {
         this.cellId = cellId;
     }
 
@@ -40,7 +40,7 @@ public class Measurement {
     }
 
     public boolean isSame(Measurement other) {
-        return other.getCellId().compareTo(cellId) == 0;
+        return other.getCellId() == cellId;
     }
 
     public void merge(Measurement other) {

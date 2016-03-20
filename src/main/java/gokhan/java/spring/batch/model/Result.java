@@ -1,11 +1,19 @@
 package gokhan.java.spring.batch.model;
 
 public class Result {
-    String cellId;
+    Cell cell;
     Counter counter;
 
-    public void setCellId(String cellId) {
-        this.cellId = cellId;
+    public Cell getCell() {
+        return cell;
+    }
+
+    public void setCell(Cell cell) {
+        this.cell = cell;
+    }
+
+    public Counter getCounter() {
+        return counter;
     }
 
     public void setCounter(Counter counter) {
@@ -15,7 +23,7 @@ public class Result {
     @Override
     public String toString() {
         return "Result{" +
-                "cellId='" + cellId + '\'' +
+                "cell=" + cell +
                 ", counter=" + counter +
                 '}';
     }

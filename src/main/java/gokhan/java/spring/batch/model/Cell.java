@@ -49,4 +49,15 @@ public class Cell {
     public void setBeamWidth(int beamWidth) {
         this.beamWidth = beamWidth;
     }
+
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "cellId=" + cellId +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", azimuth=" + azimuth +
+                ", beamWidth=" + beamWidth +
+                '}';
+    }
 }
