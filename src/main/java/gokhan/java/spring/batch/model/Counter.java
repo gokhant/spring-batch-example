@@ -1,9 +1,6 @@
 package gokhan.java.spring.batch.model;
 
-/**
- * Created by gokhant on 06/03/2016.
- */
-public class Counter {
+public class Counter implements Comparable<Counter> {
     private String name;
     private int value;
 
@@ -12,11 +9,24 @@ public class Counter {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
+
     @Override
     public String toString() {
         return "Counter{" +
                 "name='" + name + '\'' +
                 ", value=" + value +
                 '}';
+    }
+
+    public void merge(Counter other) {
+        value += other.getValue();
+    }
+
+    @Override
+    public int compareTo(Counter other) {
+        return value - other.getValue();
     }
 }

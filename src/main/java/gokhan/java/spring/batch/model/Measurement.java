@@ -5,13 +5,14 @@ import gokhan.java.spring.batch.model.Counter;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by gokhant on 06/03/2016.
- */
 public class Measurement {
     private String cellId;
     private String dataTime;
     private List<Counter> counters = new ArrayList<Counter>();
+
+    public String getCellId() {
+        return cellId;
+    }
 
     public void setCellId(String cellId) {
         this.cellId = cellId;
@@ -19,6 +20,10 @@ public class Measurement {
 
     public void setDataTime(String dataTime) {
         this.dataTime = dataTime;
+    }
+
+    public List<Counter> getCounters() {
+        return counters;
     }
 
     public void addCounter(String counterName, int counterValue) {
@@ -32,5 +37,16 @@ public class Measurement {
                 ", dataTime='" + dataTime + '\'' +
                 ", counters=" + counters +
                 '}';
+    }
+
+    public boolean isSame(Measurement other) {
+        return other.getCellId().compareTo(cellId) == 0;
+    }
+
+    public void merge(Measurement other) {
+        List<Counter> otherCounters = other.getCounters();
+        for (int i=0; i<otherCounters.size(); i++) {
+            counters.get(i).merge(otherCounters.get(i));
+        }
     }
 }

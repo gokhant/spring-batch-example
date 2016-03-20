@@ -27,7 +27,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.oksijen.lbs.centroid" level="INFO" additivity="false">
+    <logger name="gokhan.java.spring.batch" level="DEBUG" additivity="false">
         <appender-ref ref="AppAppender" />
         <appender-ref ref="StdoutAppender" />
     </logger>

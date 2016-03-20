@@ -1,7 +1,22 @@
 package gokhan.java.spring.batch.model;
 
-/**
- * Created by gokhant on 06/03/2016.
- */
 public class Result {
+    String cellId;
+    Counter counter;
+
+    public void setCellId(String cellId) {
+        this.cellId = cellId;
+    }
+
+    public void setCounter(Counter counter) {
+        this.counter = counter;
+    }
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "cellId='" + cellId + '\'' +
+                ", counter=" + counter +
+                '}';
+    }
 }

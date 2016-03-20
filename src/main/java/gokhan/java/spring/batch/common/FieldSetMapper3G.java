@@ -5,9 +5,6 @@ import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
-/**
- * Created by gokhant on 06/03/2016.
- */
 public class FieldSetMapper3G implements FieldSetMapper<Measurement> {
     @Override
     public Measurement mapFieldSet(FieldSet fs) throws BindException {

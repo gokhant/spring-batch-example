@@ -7,9 +7,6 @@ import org.springframework.batch.item.ItemWriter;
 
 import java.util.List;
 
-/**
- * Created by gokhant on 06/03/2016.
- */
 public class ResultWriter implements ItemWriter<Result> {
     Logger logger = LoggerFactory.getLogger(ResultWriter.class);
 

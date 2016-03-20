@@ -24,10 +24,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
-
-/**
- * Created by gokhant on 06/03/2016.
- */
 @Configuration
 @EnableBatchProcessing
 public class BatchConfiguration {
@@ -47,7 +43,9 @@ public class BatchConfiguration {
     @Bean
     public ItemReader<Measurement> csvFileReader() {
         FlatFileItemReader<Measurement> reader = new FlatFileItemReader<Measurement>();
-        reader.setResource(new ClassPathResource("sample_measurement.csv"));
+        reader.setResource(new ClassPathResource("3G_Samples.csv"));
+        reader.setLinesToSkip(1);
+        reader.setLineMapper(lineMapper());
         return reader;
     }
 
