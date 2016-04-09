@@ -20,7 +20,7 @@ public class SampleCacheService implements CacheServiceDef{
 
     @PostConstruct
     public void initialize() {
-        cells = new CellGeneratorUtil().createCells(20000);
+        cells = new CellGeneratorUtil().createCells(70000);
         logger.debug(cells.size() + " cells have been cached");
     }
 }

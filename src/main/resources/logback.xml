@@ -27,7 +27,7 @@
         </encoder>
     </appender>
 
-    <logger name="gokhan.java.spring.batch" level="DEBUG" additivity="false">
+    <logger name="gokhan.java.spring.batch" level="INFO" additivity="false">
         <appender-ref ref="AppAppender" />
         <appender-ref ref="StdoutAppender" />
     </logger>
